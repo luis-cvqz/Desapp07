@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+
+        <TextView
+            android:id="@+id/textLocal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Local"
+            android:textSize="30dp"
+            app:layout_constraintBottom_toTopOf="@id/textLocalScore"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_localDecreaseOne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-1"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toTopOf="@id/imageBasketBall"
+            app:layout_constraintEnd_toStartOf="@+id/textLocalScore"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textLocal"
+            android:onClick="localDecreaseOne"/>
+
+        <TextView
+            android:id="@+id/textLocalScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="40dp"
+            app:layout_constraintBottom_toTopOf="@id/imageBasketBall"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textLocal" />
+
+        <Button
+            android:id="@+id/btn_localAddOne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+1"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toTopOf="@id/btn_localAddTwo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textLocalScore"
+            app:layout_constraintTop_toBottomOf="@+id/textLocal"
+            android:onClick="localAddOne"/>
+
+        <Button
+            android:id="@+id/btn_localAddTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+2"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/imageBasketBall"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/textLocalScore"
+            app:layout_constraintTop_toBottomOf="@id/btn_localAddOne"
+            android:onClick="localAddTwo"/>
+
+        <Button
+            android:id="@+id/btn_resetCount"
+            android:layout_width="60dp"
+            android:layout_height="58dp"
+            android:padding="0dp"
+            android:text="⟲"
+            android:textSize="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageBasketBall"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:onClick="resetCount"/>
+
+        <ImageView
+            android:id="@+id/imageBasketBall"
+            android:layout_width="wrap_content"
+            android:layout_height="180dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/basketball"
+            app:layout_constraintBottom_toTopOf="@id/textVisitorScore"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textLocalScore" />
+
+        <Button
+            android:id="@+id/btn_viewResults"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="❯"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imageBasketBall"
+            app:layout_constraintTop_toTopOf="parent"
+            android:onClick="viewResults"/>
+
+        <Button
+            android:id="@+id/btn_visitorDecreaseOne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-1"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toTopOf="@id/textVisitor"
+            app:layout_constraintEnd_toStartOf="@id/textVisitorScore"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageBasketBall"
+            android:onClick="visitorDecreaseOne"/>
+
+        <TextView
+            android:id="@+id/textVisitorScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="40dp"
+            app:layout_constraintBottom_toTopOf="@+id/textVisitor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageBasketBall" />
+
+        <Button
+            android:id="@+id/btn_visitorAddOne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+1"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toTopOf="@id/btn_visitorAddTwo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/textVisitorScore"
+            app:layout_constraintTop_toBottomOf="@+id/imageBasketBall"
+            android:onClick="visitorAddOne"/>
+
+        <Button
+            android:id="@+id/btn_visitorAddTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+2"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toTopOf="@id/textVisitor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/textVisitorScore"
+            app:layout_constraintTop_toBottomOf="@+id/btn_visitorAddOne"
+            android:onClick="visitorAddTwo"/>
+
+        <TextView
+            android:id="@+id/textVisitor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Visitor"
+            android:textSize="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textVisitorScore" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
